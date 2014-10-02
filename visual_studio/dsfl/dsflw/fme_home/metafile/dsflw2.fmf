@@ -1,0 +1,267 @@
+! ----------------------------------------------------------------------
+! DSFLW2 format metafile
+!
+! Author               Date            Changes made
+! ------------------   ------------    -------------------------------
+! Peter Segerstedt     Jan 08, 2014    Original definition.
+! Peter Laulund        Jun 02, 2014    Added %H diriktive
+! Peter Segerstedt     Jun 25, 2014    Quoted default values, restored prompts
+!
+!
+!  mangler H1 DKTM projektioner
+!          H2 DVR90 - Ny dansk højdereferance
+!
+! ----------------------------------------------------------------------
+
+! ------------------------------------------------------------------------------
+! Source Reader Keywords
+! Specify keywords to be used during schema generation.
+
+SOURCE_READER DSFL
+! ------------------------------------------------------------------------------
+! Format Name
+! Defining the name of the format for which the file describes the mapping
+! file generation.
+
+FORMAT_NAME DSFLW2
+FORMAT_TYPE DYNAMIC
+
+! ------------------------------------------------------------------------------
+
+! ------------------------------------------------------------------------------
+! Destination Dataset
+! Defining the value which is placed on the mapping file dataset line.
+
+DESTINATION_DATASET \"$[DestDataset]\"
+
+! ------------------------------------------------------------------------------
+DESTINATION_PREAMBLE
+! ------------------------------------------------------------------------------
+# The following GUI lines prompt for a directory to be used as the
+# the destination of the data.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be written.
+GUI FILENAME DestDataset DSFL Files(*.dsf)|*.dsf|All Files|*.* Destination DSFL File:
+__
+
+!$(FMEGEN_DESTINATION_KEYWORD)_COORDINATE_SYSTEM_GRANULARITY FEATURE
+
+
+! These are put here in case no header feature is written.
+$(FMEGEN_DESTINATION_KEYWORD)_H0 <u00e6><u00f8><u00e5><u00c6><u00d8><u00c5>
+$(FMEGEN_DESTINATION_KEYWORD)_H4 PLACEHOLDER
+$(FMEGEN_DESTINATION_KEYWORD)_H5 PLACEHOLDER
+$(FMEGEN_DESTINATION_KEYWORD)_H41 000000000
+$(FMEGEN_DESTINATION_KEYWORD)_H57 PLACEHOLDER
+$(FMEGEN_DESTINATION_KEYWORD)_H58 <quote>Basis-udgave<space>970901<quote>
+$(FMEGEN_DESTINATION_KEYWORD)_H59 <quote>GST<space>FME<space>DSFL<space>skriver<space>version<space>2<comma><space>23.<space>juni<space>2014<quote>
+
+
+! ------------------------------------------------------------------------------
+END_DESTINATION_PREAMBLE
+! ------------------------------------------------------------------------------
+
+! ------------------------------------------------------------------------------
+DESTINATION_SETTINGS
+! ------------------------------------------------------------------------------
+
+
+! H1 - plane coordinate system
+DEFAULT_VALUE H1 U32W
+GUI OPTIONAL LOOKUP_CHOICE H1 Lokalt<space>system,LOK%System<space>34<space>Jylland<solidus>Fyn,S34J%System<space>34<space>Sj<u00e6>lland,S34S%System<space>45<space>Bornholm,S45B%UTM<space>zone<space>32<comma><space>ED50,U32%UTM<space>zone<space>32<comma><space>wgs84,U32W%UTM<space>zone<space>33<comma><space>ED50,U33%UTM<space>zone<space>33<comma><space>wgs84,U33W%DKTM1,DKTM1%DKTM2,DKTM2%DKTM3,DKTM3%DKTM4,DKTM4 Plane Coordinate System (H1):
+
+DEFAULT_VALUE H2 \"\"
+GUI OPTIONAL LOOKUP_CHOICE H2 DVR90,DVR90%Dansk<space>Normal<space>Nul<space>GI,DNNGI%Dansk<space>Normal<space>Nul<space>GM,DNNGM%Lokalt<space>system,LOK Vertical Datum (H2):
+
+DEFAULT_VALUE H3 NE
+GUI OPTIONAL CHOICE H3 YX%XY%XYZ%YXZ%NE%NEH Coordinate Axes Order:
+
+DEFAULT_VALUE H9 -999
+GUI OPTIONAL STRING_ENCODED H9 Vertical nodata value (H9):
+
+DEFAULT_VALUE H11 Geodatastyrelsen
+GUI OPTIONAL STRING_ENCODED H11 Supplier Name (H11):
+
+DEFAULT_VALUE H12 <quote>Rentemestervej<space>8<quote>
+GUI OPTIONAL STRING_ENCODED H12 Supplier Address (H12):
+
+DEFAULT_VALUE H13 2400
+GUI OPTIONAL STRING_ENCODED H13 Supplier ZIP code (H13):
+
+DEFAULT_VALUE H14 <quote>K<u00f8>benhavn<space>NV<quote>
+GUI OPTIONAL STRING_ENCODED H14 Supplier postal district (H14):
+
+DEFAULT_VALUE H15 72545000
+GUI OPTIONAL STRING_ENCODED H15 Supplier Phone number (H15):
+
+DEFAULT_VALUE H16
+GUI OPTIONAL STRING_ENCODED H16 Supplier  (H16):
+
+DEFAULT_VALUE H17 <quote>http:<solidus><solidus>support.kortforsyningen.dk<quote>
+GUI OPTIONAL STRING_ENCODED H17 Supplier website (H17):
+
+DEFAULT_VALUE H18 <quote>gst<at>gst.dk<quote>
+GUI OPTIONAL STRING_ENCODED H18 Supplier email (H18):
+
+DEFAULT_VALUE H50
+GUI OPTIONAL STRING_ENCODED H50 Additional text (H50):
+
+DEFAULT_VALUE H51
+GUI OPTIONAL STRING_ENCODED H51 Additional text (H51):
+
+DEFAULT_VALUE H52 <quote>Data<space>distribueres<space>i<space>henhold<space>til<space>aftale<space>om<space><apos>Frie<space>data<apos><quote>
+GUI OPTIONAL STRING_ENCODED H52 Additional text (H52):
+
+DEFAULT_VALUE H53 <quote>http:<solidus><solidus>www.gst.dk<solidus>emner<solidus>frie-data<solidus><quote>
+GUI OPTIONAL STRING_ENCODED H53 Additional text (H53):
+
+DEFAULT_VALUE H54
+GUI OPTIONAL STRING_ENCODED H54 Additional text (H54):
+
+DEFAULT_VALUE H55
+GUI OPTIONAL STRING_ENCODED H55 Additional text (H55):
+
+DEFAULT_VALUE H56
+GUI OPTIONAL STRING_ENCODED H56 Additional text (H56):
+
+
+! ------------------------------------------------------------------------------
+END_DESTINATION_SETTINGS
+! ------------------------------------------------------------------------------
+
+! ------------------------------------------------------------------------------
+! DEF line template
+
+DEF_LINE_TEMPLATE {FME_GEN_GROUP_NAME}
+
+! ------------------------------------------------------------------------------
+! DEF Line Break
+! Affecting how DEF lines are created within Workbench/Universal Translator.
+! phil commented out the line below as it has been superseded by the other use of DEF_LINE_BREAK
+!DEF_LINE_BREAK ATTRIB_CHANGE NO_ATTRIBS
+
+! ------------------------------------------------------------------------------
+! And the standard correlation table line
+
+CORR_LINE_TEMPLATE {FME_GEN_GROUP_NAME}
+
+! ------------------------------------------------------------------------------
+! Geometry Type Map
+! Defining how a format's types map into fme transfer types.
+
+
+GEOM_MAP dsfl_point       fme_point
+GEOM_MAP dsfl_line        fme_line
+GEOM_MAP dsfl_polygon     fme_polygon
+GEOM_MAP dsfl_text        fme_text                \
+         dsfl_text_value    fme_text_string       \
+         dsfl_rotation      fme_rotation          \
+         dsfl_text_size     fme_text_size
+GEOM_MAP dsfl_polygon     fme_rectangle
+GEOM_MAP dsfl_polygon     fme_rounded_rectangle
+GEOM_MAP dsfl_aggregate   fme_collection
+GEOM_MAP dsfl_none        fme_no_geom
+GEOM_MAP dsfl_header      fme_no_geom
+
+GEOM_MAP fme_no_map       fme_arc
+GEOM_MAP fme_no_map       fme_ellipse
+GEOM_MAP fme_no_map       fme_rounded_rectangle
+GEOM_MAP fme_no_map       fme_raster
+GEOM_MAP fme_no_map       fme_solid
+GEOM_MAP fme_no_map       fme_surface
+GEOM_MAP fme_no_map       fme_point_cloud
+
+
+! ------------------------------------------------------------------------------
+! Genericization support
+! For the plugin builder, this should always be specified.
+
+GENERICIZE_GEOMTYPE_ATTR_NAME dsfl_type
+
+! ------------------------------------------------------------------------------
+! Geometry Type Field
+! Identifying the attribute that specifies the different geometry types. This
+! is the value that control the attribution specific to a particular type of
+! geometry
+
+GEOMETRY_TYPE_FIELD dsfl_type
+
+! ----------------------------------------------------------------------
+! Define the mappings of the attribute types.
+
+ATTR_TYPE_MAP  char(width)             fme_varchar(width)         \
+               char(width)             fme_char(width)            \
+               char(255)               fme_buffer                 \
+               char(20)                fme_datetime               \
+               char(8)                 fme_date                   \
+               char(12)                fme_time                   \
+               char(1)                 fme_char                   \
+               number(31,15)           fme_real64                 \
+               number(15,7)            fme_real32                 \
+               number(11,0)            fme_int32                  \
+               number(11,0)            fme_uint32                 \
+               number(20,0)            fme_int64                  \
+               number(20,0)            fme_uint64                 \
+               logical                 fme_boolean                \
+               number(6,0)             fme_int16                  \
+               number(6,0)             fme_uint16                 \
+               number(4,0)             fme_uint8                  \
+               number(width,decimal)   fme_decimal(width,decimal)
+
+
+
+! ----------------------------------------------------------------------
+! Define the attribute case for DSFL attributes.
+
+ATTRIBUTE_CASE ANY
+
+! ----------------------------------------------------------------------
+! Define the length of the attributes stored within the dataset
+
+ATTRIBUTE_LENGTH 60
+
+! ----------------------------------------------------------------------
+! Define the invalid characters for attributes. DSFL doesn't
+! really care about attribute names, but these ones are bad for FME
+! in general.
+
+ATTRIBUTE_INVALID_CHARS "@&"
+
+! ---------------------------------------------------------------------
+! PR#18281 Kenneth 12th March 2010
+! Setting the INVALID characters which cannot be used for file names
+! \ / " : ? * < > | are the invalid characters for windows file system
+MACRO _InvalidCharacters \\/\":?*<>|
+
+FEATURE_TYPE_INVALID_CHARS "$(_InvalidCharacters)"
+
+! ----------------------------------------------------------------------
+! Fanout on fme_basename by default
+!phil commented out the line below
+!FORMAT_PARAMETER AUTO_FANOUT_ATTRIBUTE dsfl_type
+WORKBENCH_NO_FEATURE_TYPE_FANOUT
+META_TABLE ALLOWED_OUTPUT_FEATURE_TYPES GROUP_RELATED dsfl
+DEF_LINE_BREAK NO_DEF NO_ATTRIBS
+WORKBENCH_CANNED_SCHEMA dsflw2.sch
+
+! ----------------------------------------------------------------------
+! Use DSFL-reader (instead of non existing DSFLW2-reader when inspecting
+FORMAT_PARAMETER DEFAULT_READER DSFL
+
+! ------------------------------------------------------------------------------
+! Workbench Exposable Attributes
+! Giving a list of all the attributes that Workbench will show under the
+! 'Format Attributes' tab in the feature type properties dialog.
+
+WORKBENCH_EXPOSABLE_ATTRIBUTES                         \
+     dsfl_type                           char(50)      \
+     dsfl_text_justification             char(50)      \
+     dsfl_class                          char(50)      \
+     dsfl_subclass                       char(50)      \
+     dsfl_rotation                       number(31,15) \
+     dsfl_point_rotation                 number(31,15)
+
+ FORMAT_PARAMETER WRITER_AUTO_EXPOSE                   \
+     dsfl_class                          char(50)      \
+     dsfl_subclass                       char(50)
+

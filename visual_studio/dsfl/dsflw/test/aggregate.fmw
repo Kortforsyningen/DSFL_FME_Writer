@@ -1,0 +1,950 @@
+#! <?xml version="1.0" encoding="windows-1252" ?>
+#! <WORKSPACE
+#    
+#    
+#    Command-line to run this workspace:
+#    
+#    
+#    fme.exe aggregate.fmw
+#          --SourceDataset_FFS C:\Sweco\DSFLW2\svn\trunk\visual_studio\dsfl\dsflw\test\testdata\src\ffs\dsfl_aggregate.ffs
+#          --DestDataset_DSFLW2 c:\temp\aggregate.dsf
+#    
+#    
+#! PASSWORD=""
+#! GRID_VISIBLE="false"
+#! VIEW_POSITION="0 0"
+#! SHOW_INFO_NODES="true"
+#! ATTR_TYPE_ENCODING="SDF"
+#! FME_STROKE_MAX_DEVIATION="0"
+#! GRID_SNAPTO="false"
+#! BEGIN_PYTHON=""
+#! FME_GEOMETRY_HANDLING="Enhanced"
+#! DESCRIPTION=""
+#! GRID_HEIGHT="50"
+#! TITLE=""
+#! SHOW_BOOKMARKS="true"
+#! MAX_LOG_FEATURES="200"
+#! END_TCL=""
+#! FME_BUILD_NUM="13547"
+#! ZOOM_SCALE="100"
+#! CATEGORY=""
+#! REDIRECT_TERMINATORS="NONE"
+#! LEGAL_TERMS_CONDITIONS=""
+#! FME_REPROJECTION_ENGINE="FME"
+#! USAGE=""
+#! END_PYTHON=""
+#! HISTORY=""
+#! GRID_WIDTH="50"
+#! REQUIREMENTS_KEYWORD=""
+#! SOURCE_ROUTING_FILE=""
+#! DESTINATION_ROUTING_FILE=""
+#! DESTINATION="NONE"
+#! LAST_SAVE_DATE="2014-02-12T16:36:21"
+#! FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#! WORKSPACE_VERSION="1"
+#! SOURCE="NONE"
+#! LAST_SAVE_BUILD="FME(R) 2013 SP4 (20131025 - Build 13547 - WIN32)"
+#! FME_SERVER_SERVICES=""
+#! LOG_MAX_RECORDED_FEATURES="200"
+#! LOG_FILE=""
+#! REQUIREMENTS=""
+#! BEGIN_TCL=""
+#! SHOW_ANNOTATIONS="true"
+#! VIEW_PAGE_BREAKS="false"
+#! IGNORE_READER_FAILURE="No"
+#! WARN_INVALID_XFORM_PARAM="Yes"
+#! >
+#! <DATASETS>
+#! <DATASET
+#! IS_SOURCE="true"
+#! ROLE="READER"
+#! FORMAT="FFS"
+#! DATASET="$(SourceDataset_FFS)"
+#! KEYWORD="FFS_1"
+#! MULTI_GEOM_ALLOWED="false"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES=""
+#! WRITE_DEFS="true"
+#! DEFLINE_TEMPLATE=""
+#! DEFLINE_ATTRS="true"
+#! EXPOSABLE_ATTRS="fme_text_size real64 fme_rotation real64 fme_feature_type char(50) multi_reader_keyword char(50) multi_reader_id int32 fme_dataset char(50) multi_reader_full_id int32 fme_geometry fme_char(50) multi_reader_type char(50) fme_fill_color char(50) fme_basename char(50) fme_text_string char(50) fme_secondary_axis real64 fme_primary_axis real64 fme_sweep_angle real64 fme_start_angle real64 fme_type char(50) fme_color char(50)"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! GENERATE_FME_BUILD_NUM="13547"
+#! MAX_FEATURES=""
+#! COORDSYS=""
+#! MIN_FEATURES=""
+#! FEATURE_TYPES=""
+#! START_FEATURE=""
+#! />
+#! <DATASET
+#! IS_SOURCE="false"
+#! ROLE="WRITER"
+#! FORMAT="DSFLW2"
+#! DATASET="$(DestDataset_DSFLW2)"
+#! KEYWORD="DSFLW2_1"
+#! MULTI_GEOM_ALLOWED="true"
+#! ATTR_MAX_LENGTH="60"
+#! ATTR_CASE="ANY"
+#! ALLOWED_FEAT_TYPES="dsfl"
+#! WRITE_DEFS="false"
+#! DEFLINE_TEMPLATE=""
+#! DEFLINE_ATTRS="false"
+#! EXPOSABLE_ATTRS="fme_text_size number(31,15) fme_rotation number(31,15) fme_feature_type char(50) fme_dataset char(50) fme_geometry fme_char(50) dsfl_rotation number(31,15) fme_fill_color char(50) fme_basename char(50) dsfl_text_justification char(50) dsfl_type char(50) fme_text_string char(50) dsfl_class char(50) fme_secondary_axis number(31,15) fme_primary_axis number(31,15) fme_sweep_angle number(31,15) fme_start_angle number(31,15) dsfl_subclass char(50) fme_type char(50) dsfl_point_rotation number(31,15) fme_color char(50)"
+#! DEFLINE_PARMS=""
+#! ATTR_INDEX_TYPES=""
+#! ATTR_NAME_INVALID_CHARS=""
+#! SUPPORTS_FEATURE_TYPE_FANOUT="false"
+#! ENABLED="true"
+#! DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#! GENERATE_FME_BUILD_NUM="13547"
+#! FANOUT_PREFIX=""
+#! COORDSYS=""
+#! FANOUT="No"
+#! FANOUT_SUFFIX=""
+#! FANOUT_ID_ATTR=""
+#! FANOUT_DIRECTORY=""
+#! >
+#! <METAFILE_PARAMETER
+#! NAME="WRITER_AUTO_EXPOSE"
+#! VALUE="dsfl_class char(50) dsfl_subclass char(50)"
+#! />
+#! <METAFILE_PARAMETER
+#! NAME="DEFAULT_READER"
+#! VALUE="DSFL"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="varchar(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="buffer"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="datetime"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="time"
+#! FME_TYPE="fme_time"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="date"
+#! FME_TYPE="fme_date"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="real64"
+#! FME_TYPE="fme_real64"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(31,15)"
+#! FME_TYPE="fme_real64"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="real32"
+#! FME_TYPE="fme_real32"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int32"
+#! FME_TYPE="fme_int32"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(11,0)"
+#! FME_TYPE="fme_int32"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(11,0)"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(20,0)"
+#! FME_TYPE="fme_int64"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(20,0)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="logical"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="int16"
+#! FME_TYPE="fme_int16"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(6,0)"
+#! FME_TYPE="fme_int16"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(6,0)"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(4,0)"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="number(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="FFS"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_varchar(width)"
+#! FORMAT="DSFLW2"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(width)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="DSFLW2"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(255)"
+#! FME_TYPE="fme_buffer"
+#! FORMAT="DSFLW2"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(20)"
+#! FME_TYPE="fme_datetime"
+#! FORMAT="DSFLW2"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(8)"
+#! FME_TYPE="fme_date"
+#! FORMAT="DSFLW2"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(12)"
+#! FME_TYPE="fme_time"
+#! FORMAT="DSFLW2"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="char(1)"
+#! FME_TYPE="fme_char(width)"
+#! FORMAT="DSFLW2"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(31,15)"
+#! FME_TYPE="fme_real64"
+#! FORMAT="DSFLW2"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(15,7)"
+#! FME_TYPE="fme_real32"
+#! FORMAT="DSFLW2"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(11,0)"
+#! FME_TYPE="fme_int32"
+#! FORMAT="DSFLW2"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(11,0)"
+#! FME_TYPE="fme_uint32"
+#! FORMAT="DSFLW2"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(20,0)"
+#! FME_TYPE="fme_int64"
+#! FORMAT="DSFLW2"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(20,0)"
+#! FME_TYPE="fme_uint64"
+#! FORMAT="DSFLW2"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="logical"
+#! FME_TYPE="fme_boolean"
+#! FORMAT="DSFLW2"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(6,0)"
+#! FME_TYPE="fme_int16"
+#! FORMAT="DSFLW2"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(6,0)"
+#! FME_TYPE="fme_uint16"
+#! FORMAT="DSFLW2"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(4,0)"
+#! FME_TYPE="fme_uint8"
+#! FORMAT="DSFLW2"
+#! />
+#! <DATA_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="number(width,decimal)"
+#! FME_TYPE="fme_decimal(width,decimal)"
+#! FORMAT="DSFLW2"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_line"
+#! FME_TYPE="fme_line"
+#! FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_area"
+#! FME_TYPE="fme_area"
+#! FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_text"
+#! FME_TYPE="fme_text"
+#! FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_ellipse"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_arc"
+#! FME_TYPE="fme_arc"
+#! FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_rectangle"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_rounded_rectangle"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_raster"
+#! FME_TYPE="fme_raster"
+#! FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_collection"
+#! FME_TYPE="fme_collection"
+#! FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_surface"
+#! FME_TYPE="fme_surface"
+#! FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_solid"
+#! FME_TYPE="fme_solid"
+#! FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_point_cloud"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_geom"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="true"
+#! FORMAT_TYPE="fme_no_geom"
+#! FME_TYPE="SOURCE_GEOMTYPE"
+#! FORMAT="FFS"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="dsfl_point"
+#! FME_TYPE="fme_point"
+#! FORMAT="DSFLW2"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="dsfl_line"
+#! FME_TYPE="fme_line"
+#! FORMAT="DSFLW2"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="dsfl_polygon"
+#! FME_TYPE="fme_area"
+#! FORMAT="DSFLW2"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="dsfl_text"
+#! FME_TYPE="fme_text"
+#! FORMAT="DSFLW2"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="dsfl_polygon"
+#! FME_TYPE="fme_rectangle"
+#! FORMAT="DSFLW2"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="dsfl_polygon"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="DSFLW2"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="dsfl_aggregate"
+#! FME_TYPE="fme_collection"
+#! FORMAT="DSFLW2"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="dsfl_none"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="DSFLW2"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="dsfl_header"
+#! FME_TYPE="fme_no_geom"
+#! FORMAT="DSFLW2"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_arc"
+#! FORMAT="DSFLW2"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_ellipse"
+#! FORMAT="DSFLW2"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_rounded_rectangle"
+#! FORMAT="DSFLW2"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_raster"
+#! FORMAT="DSFLW2"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_solid"
+#! FORMAT="DSFLW2"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_surface"
+#! FORMAT="DSFLW2"
+#! />
+#! <GEOM_TYPE
+#! IS_SOURCE="false"
+#! FORMAT_TYPE="fme_no_map"
+#! FME_TYPE="fme_point_cloud"
+#! FORMAT="DSFLW2"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="dsfl_header"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="1"
+#! FEAT_GEOMTYPE="fme_point fme_line fme_area fme_text fme_ellipse fme_arc fme_rectangle fme_rounded_rectangle fme_raster fme_collection fme_surface fme_solid fme_point_cloud fme_no_geom"
+#! POSITION="200 -200"
+#! ORDER="3"
+#! COLLAPSED="true"
+#! KEYWORD="FFS_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="true"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="H0" ATTR_TYPE="char(7)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="H1" ATTR_TYPE="char(4)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="H3" ATTR_TYPE="char(3)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="H4" ATTR_TYPE="char(15)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="H5" ATTR_TYPE="char(15)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="H11" ATTR_TYPE="char(17)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="H12" ATTR_TYPE="char(17)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="H13" ATTR_TYPE="number(5,0)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="H14" ATTR_TYPE="char(13)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="H15" ATTR_TYPE="number(9,0)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="H16" ATTR_TYPE="number(9,0)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="H41" ATTR_TYPE="number(11,0)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="H57" ATTR_TYPE="number(11,0)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="H58" ATTR_TYPE="char(57)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="H59" ATTR_TYPE="number(11,0)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="kms_feature_type" ATTR_TYPE="char(12)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="kms_file_name" ATTR_TYPE="char(15)"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="true"
+#! NODE_NAME="dsfl_aggregate"
+#! IS_EDITABLE="false"
+#! IDENTIFIER="2"
+#! FEAT_GEOMTYPE="fme_point fme_line fme_area fme_text fme_ellipse fme_arc fme_rectangle fme_rounded_rectangle fme_raster fme_collection fme_surface fme_solid fme_point_cloud fme_no_geom"
+#! POSITION="200 -375"
+#! ORDER="4"
+#! COLLAPSED="true"
+#! KEYWORD="FFS_1"
+#! ENABLED="true"
+#! HIDDEN_USER_ATTRS=""
+#! MERGE="false"
+#! MERGE_FILTER=""
+#! MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
+#! MERGE_FILTER_CASE_SENSITIVE="false"
+#! DYNAMIC_SCHEMA="false"
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="D100" ATTR_TYPE="number(2,0)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="D111" ATTR_TYPE="number(4,0)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="D5601" ATTR_TYPE="char(11)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="D5602" ATTR_TYPE="number(6,0)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="dsfl_class" ATTR_TYPE="char(3)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="dsfl_subclass" ATTR_TYPE="char(3)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="kms_feature_type" ATTR_TYPE="char(15)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="kms_file_name" ATTR_TYPE="char(15)"/>
+#! </FEATURE_TYPE>
+#! <FEATURE_TYPE
+#! IS_SOURCE="false"
+#! NODE_NAME="dsfl"
+#! IS_EDITABLE="true"
+#! IDENTIFIER="3"
+#! FEAT_GEOMTYPE="dsfl_point dsfl_line dsfl_polygon dsfl_arc dsfl_text"
+#! POSITION="1881 -265"
+#! ORDER="5"
+#! COLLAPSED="true"
+#! KEYWORD="DSFLW2_1"
+#! ENABLED="true"
+#! FANOUT="No"
+#! FANOUT_ID_ATTR=""
+#! >
+#! <FEAT_ATTRIBUTE ATTR_NAME="dsfl_type" ATTR_TYPE="char(50)"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="dsfl_class" ATTR_TYPE="char(50)" EXPOSABLE_ATTR="true"/>
+#! <FEAT_ATTRIBUTE ATTR_NAME="dsfl_subclass" ATTR_TYPE="char(50)" EXPOSABLE_ATTR="true"/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI MULTIFILE SourceDataset_FFS FME_Feature_Store_Files(*.ffs)|*.ffs|All_Files|*.* Source FME Feature Store (FFS) File(s):"
+#! DEFAULT_VALUE="$(FME_MF_DIR)testdata\src\ffs\dsfl_aggregate.ffs"
+#! IS_STAND_ALONE="false"
+#! />
+#! <GLOBAL_PARAMETER
+#! GUI_LINE="GUI FILENAME DestDataset_DSFLW2 DSFL Files(*.dsf)|*.dsf|All Files|*.* Destination DSFL File:"
+#! DEFAULT_VALUE="c:\temp\aggregate.dsf"
+#! IS_STAND_ALONE="false"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#! IDENTIFIER="6"
+#! TYPE="AttributeCreator"
+#! VERSION="3"
+#! POSITION="1158 -189"
+#! ORDER="6"
+#! PARMS_EDITED="true"
+#! ENABLED="true"
+#! >
+#! <OUTPUT_FEAT NAME="OUTPUT"/>
+#! <FEAT_COLLAPSED COLLAPSED="0"/>
+#! <XFORM_ATTR ATTR_NAME="D100" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="D111" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="D5601" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="D5602" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="dsfl_class" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="dsfl_subclass" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="kms_feature_type" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="kms_file_name" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="H0" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="H1" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="H3" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="H4" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="H5" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="H11" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="H12" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="H13" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="H14" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="H15" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="H16" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="H41" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="H57" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="H58" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="H59" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_ATTR ATTR_NAME="dsfl_type" IS_USER_CREATED="false" FEAT_INDEX="0"/>
+#! <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#! <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#! <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="dsfl_type,&lt;at&gt;Value&lt;openparen&gt;kms_feature_type&lt;closeparen&gt;"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#! IDENTIFIER="7"
+#! SOURCE_NODE="6"
+#! TARGET_NODE="3"
+#! SOURCE_PORT_DESC="fo 0"
+#! TARGET_PORT_DESC="-1"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="8"
+#! SOURCE_NODE="2"
+#! TARGET_NODE="6"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#! IDENTIFIER="9"
+#! SOURCE_NODE="1"
+#! TARGET_NODE="6"
+#! SOURCE_PORT_DESC="-1"
+#! TARGET_PORT_DESC="fi 0"
+#! ENABLED="true"
+#! EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+#! 
+GUI IGNORE SourceDataset_FFS_1,FFS_IN_PASSPHRASE_FFS_1,FFS_IN_SEARCH_ENVELOPE_MINX_FFS_1,FFS_IN_SEARCH_ENVELOPE_MINY_FFS_1,FFS_IN_SEARCH_ENVELOPE_MAXX_FFS_1,FFS_IN_SEARCH_ENVELOPE_MAXY_FFS_1,FFS_IN_CLIP_TO_ENVELOPE_FFS_1,SEARCH_ENVELOPE_COORDINATE_SYSTEM_FFS_1,_SEARCH_CLOSEST_POINT_FFS_1,DestDataset_DSFLW2_1,DSFLW2_OUT_H12_DSFLW2_1
+
+
+DEFAULT_MACRO SourceDataset_FFS $(FME_MF_DIR)testdata\src\ffs\dsfl_aggregate.ffs
+GUI MULTIFILE SourceDataset_FFS FME_Feature_Store_Files(*.ffs)|*.ffs|All_Files|*.* Source FME Feature Store (FFS) File(s):
+DEFAULT_MACRO DestDataset_DSFLW2 c:\temp\aggregate.dsf
+GUI FILENAME DestDataset_DSFLW2 DSFL Files(*.dsf)|*.dsf|All Files|*.* Destination DSFL File:
+INCLUDE TCL
+proc __FME_ExpandMacros {text {maxlevels 100}} {
+   if { $maxlevels <= 0 } { return $text; }
+   set pattern [join {{\$} {\([^()$]*\)}} {}]
+   set indices [regexp -inline -all -indices $pattern $text]
+   if [llength $indices] {
+      foreach pair [lreverse $indices] {
+         lassign $pair start end
+         set replacement {}
+         set replacement $::FME_MacroValues([string range $text [expr $start + 2] [expr $end - 1]])
+         set text [string replace $text $start $end $replacement]
+      }
+      return [__FME_ExpandMacros $text [expr $maxlevels - 1]]
+   }
+   return $text
+}
+
+proc __FME_ExpandEnvVars {text {maxlevels 100}} {
+   if { $maxlevels <= 0 } { return $text; }
+   set pattern [join {{\$} {\{[^\{\}$]*\}}} {}]
+   set indices [regexp -inline -all -indices $pattern $text]
+   if [llength $indices] {
+      foreach pair [lreverse $indices] {
+         lassign $pair start end
+         set replacement {}
+         set replacement $::env([string range $text [expr $start + 2] [expr $end - 1]])
+         set text [string replace $text $start $end $replacement]
+      }
+      return [__FME_ExpandEnvVars $text [expr $maxlevels - 1]]
+   }
+   return $text
+}
+
+proc __FME_EvalAndEncodeMacro {macroName} {
+   set macroVal {}
+   catch { set macroVal [__FME_ExpandMacros $::FME_MacroValues($macroName)] }
+   catch { set macroVal [__FME_ExpandEnvVars $macroVal] }
+    if {[string equal -length 15 {FME_CONDITIONAL} $macroVal ] == 0} {
+        return [FME_EncodeText $macroVal];
+    }
+   return $macroVal; 
+}
+END_INCLUDE
+INCLUDE [	puts "MACRO SourceDataset_FFS__FMEENCODED__ [__FME_EvalAndEncodeMacro SourceDataset_FFS]" ; ]
+
+INCLUDE [	puts "MACRO DestDataset_DSFLW2__FMEENCODED__ [__FME_EvalAndEncodeMacro DestDataset_DSFLW2]" ; ]
+
+INCLUDE [ if {{$(SourceDataset_FFS)} == {}} { puts_real {Parameter 'SourceDataset_FFS' must be given a value.}; exit 1; }; ]
+INCLUDE [ if {{$(DestDataset_DSFLW2)} == {}} { puts_real {Parameter 'DestDataset_DSFLW2' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE FFS
+READER_KEYWORD FFS_1
+READER_GEN_DIRECTIVES SEARCH_ENVELOPE_MINX,0,SEARCH_ENVELOPE_MINY,0,PASSPHRASE,,_MERGE_SCHEMAS,YES,CLIP_TO_ENVELOPE,NO,USE_SEARCH_ENVELOPE,NO,FFS_EXPOSE_FORMAT_ATTRS,,SEARCH_ENVELOPE_MAXX,0,SEARCH_ENVELOPE_MAXY,0
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} DSFLW2
+MULTI_WRITER_KEYWORD{0} DSFLW2_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "FFS_1"
+#! END_WB_HEADER
+#! START_SOURCE_HEADER FFS FFS_1
+# ============================================================================
+# The following GUI line prompts for the Feature Store file to be read
+# The dataset this mapping file was generated from was:
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO SourceDataset
+INCLUDE [ if {{$(SourceDataset)} != ""} {                        \
+ puts {DEFAULT_MACRO SourceDataset_FFS_1 $(SourceDataset)}     \
+ } ]
+#! END_WB_HEADER
+#! START_SOURCE_HEADER FFS FFS_1
+DEFAULT_MACRO SourceDataset_FFS_1 $(SourceDataset_FFS)
+GUI MULTIFILE SourceDataset_FFS_1 FME_Feature_Store_Files(*.ffs)|*.ffs|All_Files|*.* Source FME Feature Store (FFS) File(s):
+# ============================================================================
+# Set the passphrase (which is optional)
+DEFAULT_MACRO FFS_IN_PASSPHRASE_FFS_1 
+FFS_1_PASSPHRASE "$(FFS_IN_PASSPHRASE_FFS_1)"
+GUI OPTIONAL PASSWORD FFS_IN_PASSPHRASE_FFS_1 Password:
+# Include this file in source setting section to add native search envelope processing
+# Zero as a default means we don't do any search -- this makes workbench happier
+# ===========================================================================
+DEFAULT_MACRO FFS_IN_SEARCH_ENVELOPE_MINX_FFS_1 0
+FFS_1_SEARCH_ENVELOPE "$(FFS_IN_SEARCH_ENVELOPE_MINX_FFS_1)"
+GUI OPTIONAL FLOAT FFS_IN_SEARCH_ENVELOPE_MINX_FFS_1 Minimum X:
+# ===========================================================================
+DEFAULT_MACRO FFS_IN_SEARCH_ENVELOPE_MINY_FFS_1 0
+FFS_1_SEARCH_ENVELOPE "$(FFS_IN_SEARCH_ENVELOPE_MINY_FFS_1)"
+GUI OPTIONAL FLOAT FFS_IN_SEARCH_ENVELOPE_MINY_FFS_1 Minimum Y:
+# ===========================================================================
+DEFAULT_MACRO FFS_IN_SEARCH_ENVELOPE_MAXX_FFS_1 0
+FFS_1_SEARCH_ENVELOPE "$(FFS_IN_SEARCH_ENVELOPE_MAXX_FFS_1)"
+GUI OPTIONAL FLOAT FFS_IN_SEARCH_ENVELOPE_MAXX_FFS_1 Maximum X:
+# ===========================================================================
+DEFAULT_MACRO FFS_IN_SEARCH_ENVELOPE_MAXY_FFS_1 0
+FFS_1_SEARCH_ENVELOPE "$(FFS_IN_SEARCH_ENVELOPE_MAXY_FFS_1)"
+GUI OPTIONAL FLOAT FFS_IN_SEARCH_ENVELOPE_MAXY_FFS_1 Maximum Y:
+# ===========================================================================
+DEFAULT_MACRO FFS_IN_CLIP_TO_ENVELOPE_FFS_1 NO
+FFS_1_CLIP_TO_ENVELOPE "$(FFS_IN_CLIP_TO_ENVELOPE_FFS_1)"
+GUI OPTIONAL CHECKBOX FFS_IN_CLIP_TO_ENVELOPE_FFS_1 YES%NO Clip to Search Envelope
+# By default, strip FME meta-attributes (likemulti_reader_keyword) from
+# the features the FFS reader creates.
+FFS_1_STRIP_META_ATTRS YES
+# By default, ignore spillover files (*_1.ffs,*_2.ffs,etc).
+# When enabled, these files will be ignored by the reader, and only read when
+# *.ffs itself is read.
+FFS_1_ENFORCE_SECONDARY_FILE_NAMES YES
+# PR:31021
+# Include this file in workbench source preamble section to enable the ability
+# to specify a coordinate system for search envelope processing
+# ===========================================================================
+DEFAULT_MACRO SEARCH_ENVELOPE_COORDINATE_SYSTEM_FFS_1 
+GUI OPTIONAL COORDSYS SEARCH_ENVELOPE_COORDINATE_SYSTEM_FFS_1 Search Envelope Coordinate System:
+FFS_1_SEARCH_ENVELOPE_COORDINATE_SYSTEM "$(SEARCH_ENVELOPE_COORDINATE_SYSTEM_FFS_1)"
+# ===========================================================================
+# ========================================================================
+# If desired, the below string can specify a point, and the closest feature
+# in the FFS file will be read and returned.
+DEFAULT_MACRO _SEARCH_CLOSEST_POINT_FFS_1 
+GUI OPTIONAL TEXT _SEARCH_CLOSEST_POINT_FFS_1 Closest Search Point:
+FFS_1_SEARCH_CLOSEST_POINT $(_SEARCH_CLOSEST_POINT_FFS_1)
+FFS_1_DATASET "$(SourceDataset_FFS_1)"
+#! END_SOURCE_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "DSFLW2_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER DSFLW2 DSFLW2_1
+# The following GUI lines prompt for a directory to be used as the
+# the destination of the data.
+# The user input is stored in a macro, which is then used to define
+# the dataset to be written.
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_DSFLW2_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER DSFLW2 DSFLW2_1
+DEFAULT_MACRO DestDataset_DSFLW2_1 $(DestDataset_DSFLW2)
+GUI FILENAME DestDataset_DSFLW2_1 DSFL Files(*.dsf)|*.dsf|All Files|*.* Destination DSFL File:
+DSFLW2_1_COORDINATE_SYSTEM_GRANULARITY FEATURE
+# Origin
+DEFAULT_MACRO DSFLW2_OUT_H12_DSFLW2_1 Hello<space>World!
+DSFLW2_1_H12 "$(DSFLW2_OUT_H12_DSFLW2_1)"
+GUI STRING_ENCODED DSFLW2_OUT_H12_DSFLW2_1 H12:
+DSFLW2_1_DATASET "$(DestDataset_DSFLW2_1)"
+#! END_DEST_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)aggregate.log"
+LOG_APPEND NO
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+LOG_FILTER_MASK -1
+DEFAULT_MACRO DATASET_KEYWORD_FFS_1 FFS_1
+DEFAULT_MACRO DATASET_KEYWORD_DSFLW2_1 DSFLW2_1
+# -------------------------------------------------------------------------
+
+FFS_1_READER_META_ATTRIBUTES fme_feature_type
+
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME aggregate
+MACRO FME_VIEWER_APP fmedatainspector
+# -------------------------------------------------------------------------
+
+INCLUDE [ if {[info exists env(FME_TEMP)] && [file isdirectory $env(FME_TEMP)]} {set gVisualizerTemp $env(FME_TEMP)}  elseif {[info exists env(TEMP)] && [file isdirectory $env(TEMP)]}  {set gVisualizerTemp $env(TEMP)}  elseif { $tcl_platform(platform) == "unix" } {set gVisualizerTemp "/tmp"} else {set gVisualizerTemp c:};  regsub -all {[ ,&]} {$(WORKSPACE_NAME)} {_} wsname; set gVisualizerTemp $gVisualizerTemp/${wsname}_[clock format [clock seconds] -format %H%M%S];  puts "MACRO WORKSPACE_TEMP_DIR $gVisualizerTemp"; 
+MACRO VISUALIZER_FEATURE_FILE $(WORKSPACE_TEMP_DIR)/inspector.ffs
+MACRO VISUALIZER_SCHEMA_FILE $(WORKSPACE_TEMP_DIR)/inspector.fsc
+MACRO VISUALIZER_CREATE_SPATIAL_INDEX YES
+# -------------------------------------------------------------------------
+FFS_1_DEF dsfl_header   H0                           char(7)   H1                           char(4)   H3                           char(3)   H4                           char(15)   H5                           char(15)   H11                          char(17)   H12                          char(17)   H13                          number(5,0)   H14                          char(13)   H15                          number(9,0)   H16                          number(9,0)   H41                          number(11,0)   H57                          number(11,0)   H58                          char(57)   H59                          number(11,0)   kms_feature_type             char(12)   kms_file_name                char(15)
+# -------------------------------------------------------------------------
+FFS_1_DEF dsfl_aggregate   D100                         number(2,0)   D111                         number(4,0)   D5601                        char(11)   D5602                        number(6,0)   dsfl_class                   char(3)   dsfl_subclass                char(3)   kms_feature_type             char(15)   kms_file_name                char(15)
+
+# -------------------------------------------------------------------------
+
+Lookup ___KnownFeatureTypes___   dsfl_header yes   dsfl_aggregate yes   "" no
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory   FACTORY_NAME "Unexpected Input Remover"   INPUT FEATURE_TYPE *   TEST @Lookup(___KnownFeatureTypes___,@FeatureType()) == yes   OUTPUT PASSED FEATURE_TYPE *
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "Source -> Generic"    INPUT FEATURE_TYPE *    OUTPUT FEATURE_TYPE *       @Transform(FFS,FME_GENERIC,PRESERVE_GEOMETRY)
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+FACTORY_DEF * AttrSetFactory FACTORY_NAME AttributeCreator INPUT  FEATURE_TYPE dsfl_aggregate    INPUT  FEATURE_TYPE dsfl_header ATTR dsfl_type <at>Value<openparen>kms_feature_type<closeparen>    OUTPUT OUTPUT FEATURE_TYPE AttributeCreator_OUTPUT 
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory    FACTORY_NAME "AttributeCreator_OUTPUT -> dsfl Correlator"    INPUT FEATURE_TYPE AttributeCreator_OUTPUT    OUTPUT FEATURE_TYPE __GO_TO_FINAL_OUTPUT_ROUTER__       multi_writer_id 0       @Transform(FME_GENERIC,DSFLW2)       @SupplyAttributes(ENCODED,__wb_out_feat_type__,dsfl)
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TestFactory   FACTORY_NAME "Final Output Feature Type Router"   INPUT FEATURE_TYPE *   TEST @Value(__wb_out_feat_type__) != ""   OUTPUT PASSED FEATURE_TYPE *     @FeatureType(@Value(__wb_out_feat_type__))   OUTPUT FAILED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+

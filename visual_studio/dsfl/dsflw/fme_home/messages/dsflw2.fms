@@ -1,0 +1,23 @@
+857550,Error opening input file
+857551,Feature type is '%0'
+857552,Unsupported feature type
+857553,A DSFL header has already been processed
+857554,Internal error
+857555,Can't create temporary output file name
+857556,Can't create output file
+857557,Can't create temporary output file
+857558,%0
+857559,No dsfl_class attribute found
+857560,No dsfl_subclass attribute found
+857561,No fme_geometry attribute found
+857562,Unsupported FME geometry for dsfl_polygon feature
+857563,No points processed - no output file is created
+857564,Expected FME geometry of type fme_aggregate
+857565,Unexpected FME aggregate geometry
+857566,No H3 attribute found in DSFL header (coordinate order)
+857567,Expected FME geometry of fme_point for dsfl_text feature
+857568,dsfl_text_value attribute expected
+857569,dsfl_text_code attribute expected
+857570,dsfl_origin_record_index attribute not found
+857571,duplicate dsfl_origin_record_index found
+

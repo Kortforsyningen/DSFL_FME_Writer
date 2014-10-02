@@ -1,0 +1,3 @@
+LOK	Lokalt system
+DNNGI	Dansk Normal Nul GI
+DNNGM	Dansk Normal Nul GM

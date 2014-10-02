@@ -1,0 +1,8 @@
+LOK	Lokalt system
+S34J	System 34 Jylland/Fyn
+S34S	System 34 Sjælland
+S45B	System 45 Bornholm
+U32	UTM zone 32, ED50
+U33	UTM zone 33, ED50
+U32W	UTM zone 32, wgs84
+U33W	UTM zone 33, wgs84
